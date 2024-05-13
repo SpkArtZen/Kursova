@@ -17,7 +17,7 @@ namespace Kursova
         {
             InitializeComponent();
             //commsss
-
+            //csdfdfer
             StartPosition = FormStartPosition.CenterScreen;
             
         }
