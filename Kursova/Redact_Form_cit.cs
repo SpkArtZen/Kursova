@@ -640,6 +640,18 @@ namespace Kursova
                 MessageBox.Show("Будь ласка, виберіть документ для видалення.");
             }
         }
-    }
 
+        private void Add_Education_CheckedChanged(object sender, EventArgs e)
+        {
+            if(Add_Education.Checked)
+            {
+
+            }
+        }
+
+        private void Add_Educ_Click(object sender, EventArgs e)
+        {
+
+        }
+    }
 }

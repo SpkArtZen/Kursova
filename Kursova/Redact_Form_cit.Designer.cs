@@ -86,12 +86,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Education = new System.Windows.Forms.TabPage();
-            this.Previous_place_of_work = new System.Windows.Forms.TabPage();
             this.Skills_Citizen = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.Add_Education = new System.Windows.Forms.RadioButton();
-            this.Update_Education = new System.Windows.Forms.RadioButton();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.Update_Education = new System.Windows.Forms.RadioButton();
+            this.Add_Education = new System.Windows.Forms.RadioButton();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.Add_Educ = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -102,7 +105,9 @@
             this.panel3.SuspendLayout();
             this.Update_panel.SuspendLayout();
             this.Add_panel.SuspendLayout();
+            this.Education.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -409,7 +414,6 @@
             this.tabControl1.Controls.Add(this.Citizen);
             this.tabControl1.Controls.Add(this.Documents);
             this.tabControl1.Controls.Add(this.Education);
-            this.tabControl1.Controls.Add(this.Previous_place_of_work);
             this.tabControl1.Controls.Add(this.Skills_Citizen);
             this.tabControl1.Location = new System.Drawing.Point(12, 116);
             this.tabControl1.Name = "tabControl1";
@@ -677,21 +681,13 @@
             // 
             // Education
             // 
+            this.Education.Controls.Add(this.panel6);
             this.Education.Location = new System.Drawing.Point(4, 25);
             this.Education.Name = "Education";
             this.Education.Size = new System.Drawing.Size(576, 435);
             this.Education.TabIndex = 2;
             this.Education.Text = "Освіта";
             this.Education.UseVisualStyleBackColor = true;
-            // 
-            // Previous_place_of_work
-            // 
-            this.Previous_place_of_work.Location = new System.Drawing.Point(4, 25);
-            this.Previous_place_of_work.Name = "Previous_place_of_work";
-            this.Previous_place_of_work.Size = new System.Drawing.Size(576, 435);
-            this.Previous_place_of_work.TabIndex = 3;
-            this.Previous_place_of_work.Text = "Колишні місця роботи";
-            this.Previous_place_of_work.UseVisualStyleBackColor = true;
             // 
             // Skills_Citizen
             // 
@@ -708,21 +704,22 @@
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.Update_Education);
             this.panel6.Controls.Add(this.Add_Education);
-            this.panel6.Location = new System.Drawing.Point(656, 141);
+            this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(577, 435);
             this.panel6.TabIndex = 0;
             // 
-            // Add_Education
+            // panel7
             // 
-            this.Add_Education.AutoSize = true;
-            this.Add_Education.Location = new System.Drawing.Point(36, 15);
-            this.Add_Education.Name = "Add_Education";
-            this.Add_Education.Size = new System.Drawing.Size(76, 20);
-            this.Add_Education.TabIndex = 0;
-            this.Add_Education.TabStop = true;
-            this.Add_Education.Text = "Додати";
-            this.Add_Education.UseVisualStyleBackColor = true;
+            this.panel7.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.Add_Educ);
+            this.panel7.Controls.Add(this.label16);
+            this.panel7.Controls.Add(this.label15);
+            this.panel7.Location = new System.Drawing.Point(36, 42);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(507, 364);
+            this.panel7.TabIndex = 2;
             // 
             // Update_Education
             // 
@@ -735,19 +732,58 @@
             this.Update_Education.Text = "Оновити/видалити";
             this.Update_Education.UseVisualStyleBackColor = true;
             // 
-            // panel7
+            // Add_Education
             // 
-            this.panel7.Location = new System.Drawing.Point(36, 42);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(507, 364);
-            this.panel7.TabIndex = 2;
+            this.Add_Education.AutoSize = true;
+            this.Add_Education.Location = new System.Drawing.Point(36, 15);
+            this.Add_Education.Name = "Add_Education";
+            this.Add_Education.Size = new System.Drawing.Size(76, 20);
+            this.Add_Education.TabIndex = 0;
+            this.Add_Education.TabStop = true;
+            this.Add_Education.Text = "Додати";
+            this.Add_Education.UseVisualStyleBackColor = true;
+            this.Add_Education.CheckedChanged += new System.EventHandler(this.Add_Education_CheckedChanged);
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(25, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Тип освіти:";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(25, 108);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(84, 32);
+            this.label16.TabIndex = 1;
+            this.label16.Text = "Номер \r\nдокумента: ";
+            // 
+            // Add_Educ
+            // 
+            this.Add_Educ.Location = new System.Drawing.Point(28, 174);
+            this.Add_Educ.Name = "Add_Educ";
+            this.Add_Educ.Size = new System.Drawing.Size(81, 23);
+            this.Add_Educ.TabIndex = 2;
+            this.Add_Educ.Text = "Додати";
+            this.Add_Educ.UseVisualStyleBackColor = true;
+            this.Add_Educ.Click += new System.EventHandler(this.Add_Educ_Click);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(120, 41);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 22);
+            this.textBox1.TabIndex = 3;
             // 
             // Redact_Form_cit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1211, 579);
-            this.Controls.Add(this.panel6);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -769,8 +805,11 @@
             this.Update_panel.PerformLayout();
             this.Add_panel.ResumeLayout(false);
             this.Add_panel.PerformLayout();
+            this.Education.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel7.ResumeLayout(false);
+            this.panel7.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -809,7 +848,6 @@
         private System.Windows.Forms.TabPage Citizen;
         private System.Windows.Forms.TabPage Documents;
         private System.Windows.Forms.TabPage Education;
-        private System.Windows.Forms.TabPage Previous_place_of_work;
         private System.Windows.Forms.TabPage Skills_Citizen;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label11;
@@ -841,5 +879,9 @@
         private System.Windows.Forms.RadioButton Add_Education;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.RadioButton Update_Education;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Button Add_Educ;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

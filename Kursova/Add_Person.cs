@@ -67,6 +67,7 @@ namespace Kursova
                     MessageBox.Show(ex.Message);
                 }
             });
+
         }
         private void UpdateDays()
         {
@@ -110,12 +111,14 @@ namespace Kursova
                 Employer_panel.Visible = false;
                 Citizen_panel.Visible = true;
                 phone_list_emp.ReadOnly = true;
+                Citizen_panel.BringToFront();
             }
             else if (check_employer.Checked)
             {
-                Citizen_panel.Visible = false;
+                Citizen_panel.Visible = true;
                 Employer_panel.Visible = true;
                 phone_list_emp.ReadOnly = true;
+                Employer_panel.BringToFront();
                 Employer_panel.BackColor = Color.FromArgb(0, 255, 255, 255);
                 Employer_panel.BackColor = SystemColors.GradientInactiveCaption;
             }

@@ -34,20 +34,6 @@
             this.check_employer = new System.Windows.Forms.RadioButton();
             this.check_citizen = new System.Windows.Forms.RadioButton();
             this.Employer_panel = new System.Windows.Forms.Panel();
-            this.add_Employer = new System.Windows.Forms.Button();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.remove_phone = new System.Windows.Forms.Button();
-            this.comment_box = new System.Windows.Forms.TextBox();
-            this.addphone = new System.Windows.Forms.Button();
-            this.phone_list_emp = new System.Windows.Forms.RichTextBox();
-            this.phone_emp_text = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.emp_email = new System.Windows.Forms.TextBox();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.Employer_name = new System.Windows.Forms.Label();
-            this.name_employer_text_box = new System.Windows.Forms.TextBox();
             this.Citizen_panel = new System.Windows.Forms.Panel();
             this.Add_Citizen = new System.Windows.Forms.Button();
             this.panel8 = new System.Windows.Forms.Panel();
@@ -71,16 +57,30 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.name_Citizen = new System.Windows.Forms.TextBox();
+            this.add_Employer = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.remove_phone = new System.Windows.Forms.Button();
+            this.comment_box = new System.Windows.Forms.TextBox();
+            this.addphone = new System.Windows.Forms.Button();
+            this.phone_list_emp = new System.Windows.Forms.RichTextBox();
+            this.phone_emp_text = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.emp_email = new System.Windows.Forms.TextBox();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.Employer_name = new System.Windows.Forms.Label();
+            this.name_employer_text_box = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.Employer_panel.SuspendLayout();
-            this.panel6.SuspendLayout();
-            this.panel5.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.Citizen_panel.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel6.SuspendLayout();
+            this.panel5.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -139,154 +139,15 @@
             // Employer_panel
             // 
             this.Employer_panel.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
-            this.Employer_panel.Controls.Add(this.Citizen_panel);
             this.Employer_panel.Controls.Add(this.add_Employer);
             this.Employer_panel.Controls.Add(this.panel6);
             this.Employer_panel.Controls.Add(this.panel5);
             this.Employer_panel.Controls.Add(this.panel4);
-            this.Employer_panel.Location = new System.Drawing.Point(11, 205);
+            this.Employer_panel.Location = new System.Drawing.Point(12, 205);
             this.Employer_panel.Name = "Employer_panel";
             this.Employer_panel.Size = new System.Drawing.Size(852, 412);
             this.Employer_panel.TabIndex = 2;
             this.Employer_panel.Visible = false;
-            // 
-            // add_Employer
-            // 
-            this.add_Employer.Location = new System.Drawing.Point(21, 347);
-            this.add_Employer.Name = "add_Employer";
-            this.add_Employer.Size = new System.Drawing.Size(189, 35);
-            this.add_Employer.TabIndex = 3;
-            this.add_Employer.Text = "Додати роботодавця";
-            this.add_Employer.UseVisualStyleBackColor = true;
-            this.add_Employer.Click += new System.EventHandler(this.add_Employer_Click);
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel6.Controls.Add(this.remove_phone);
-            this.panel6.Controls.Add(this.comment_box);
-            this.panel6.Controls.Add(this.addphone);
-            this.panel6.Controls.Add(this.phone_list_emp);
-            this.panel6.Controls.Add(this.phone_emp_text);
-            this.panel6.Controls.Add(this.label3);
-            this.panel6.Location = new System.Drawing.Point(18, 154);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(806, 187);
-            this.panel6.TabIndex = 2;
-            // 
-            // remove_phone
-            // 
-            this.remove_phone.Location = new System.Drawing.Point(478, 119);
-            this.remove_phone.Name = "remove_phone";
-            this.remove_phone.Size = new System.Drawing.Size(42, 40);
-            this.remove_phone.TabIndex = 5;
-            this.remove_phone.Text = "-";
-            this.remove_phone.UseVisualStyleBackColor = true;
-            this.remove_phone.Click += new System.EventHandler(this.remove_phone_Click);
-            // 
-            // comment_box
-            // 
-            this.comment_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.comment_box.Location = new System.Drawing.Point(430, 22);
-            this.comment_box.Multiline = true;
-            this.comment_box.Name = "comment_box";
-            this.comment_box.Size = new System.Drawing.Size(204, 93);
-            this.comment_box.TabIndex = 4;
-            // 
-            // addphone
-            // 
-            this.addphone.Location = new System.Drawing.Point(430, 119);
-            this.addphone.Name = "addphone";
-            this.addphone.Size = new System.Drawing.Size(42, 40);
-            this.addphone.TabIndex = 3;
-            this.addphone.Text = "+";
-            this.addphone.UseVisualStyleBackColor = true;
-            this.addphone.Click += new System.EventHandler(this.addphone_Click);
-            // 
-            // phone_list_emp
-            // 
-            this.phone_list_emp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phone_list_emp.Location = new System.Drawing.Point(23, 63);
-            this.phone_list_emp.Name = "phone_list_emp";
-            this.phone_list_emp.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.phone_list_emp.Size = new System.Drawing.Size(378, 96);
-            this.phone_list_emp.TabIndex = 2;
-            this.phone_list_emp.Text = "";
-            // 
-            // phone_emp_text
-            // 
-            this.phone_emp_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.phone_emp_text.Location = new System.Drawing.Point(176, 24);
-            this.phone_emp_text.Name = "phone_emp_text";
-            this.phone_emp_text.Size = new System.Drawing.Size(225, 22);
-            this.phone_emp_text.TabIndex = 1;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 24);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(122, 16);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Номер телефону:";
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel5.Controls.Add(this.label2);
-            this.panel5.Controls.Add(this.emp_email);
-            this.panel5.Location = new System.Drawing.Point(18, 87);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(806, 64);
-            this.panel5.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.AliceBlue;
-            this.label2.Location = new System.Drawing.Point(17, 20);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(141, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Пошта роботодавця:";
-            // 
-            // emp_email
-            // 
-            this.emp_email.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.emp_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.emp_email.Location = new System.Drawing.Point(176, 18);
-            this.emp_email.Name = "emp_email";
-            this.emp_email.Size = new System.Drawing.Size(197, 22);
-            this.emp_email.TabIndex = 0;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel4.Controls.Add(this.Employer_name);
-            this.panel4.Controls.Add(this.name_employer_text_box);
-            this.panel4.Location = new System.Drawing.Point(18, 17);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(806, 64);
-            this.panel4.TabIndex = 0;
-            // 
-            // Employer_name
-            // 
-            this.Employer_name.AutoSize = true;
-            this.Employer_name.BackColor = System.Drawing.Color.AliceBlue;
-            this.Employer_name.Location = new System.Drawing.Point(17, 20);
-            this.Employer_name.Name = "Employer_name";
-            this.Employer_name.Size = new System.Drawing.Size(121, 16);
-            this.Employer_name.TabIndex = 1;
-            this.Employer_name.Text = "Ім\'я роботодавця:";
-            // 
-            // name_employer_text_box
-            // 
-            this.name_employer_text_box.BackColor = System.Drawing.SystemColors.HighlightText;
-            this.name_employer_text_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.name_employer_text_box.Location = new System.Drawing.Point(162, 18);
-            this.name_employer_text_box.Name = "name_employer_text_box";
-            this.name_employer_text_box.Size = new System.Drawing.Size(197, 22);
-            this.name_employer_text_box.TabIndex = 0;
             // 
             // Citizen_panel
             // 
@@ -295,7 +156,7 @@
             this.Citizen_panel.Controls.Add(this.panel8);
             this.Citizen_panel.Controls.Add(this.panel7);
             this.Citizen_panel.Controls.Add(this.panel3);
-            this.Citizen_panel.Location = new System.Drawing.Point(0, 0);
+            this.Citizen_panel.Location = new System.Drawing.Point(12, 205);
             this.Citizen_panel.Name = "Citizen_panel";
             this.Citizen_panel.Size = new System.Drawing.Size(852, 412);
             this.Citizen_panel.TabIndex = 3;
@@ -515,11 +376,150 @@
             this.name_Citizen.Size = new System.Drawing.Size(121, 22);
             this.name_Citizen.TabIndex = 0;
             // 
+            // add_Employer
+            // 
+            this.add_Employer.Location = new System.Drawing.Point(21, 347);
+            this.add_Employer.Name = "add_Employer";
+            this.add_Employer.Size = new System.Drawing.Size(189, 35);
+            this.add_Employer.TabIndex = 3;
+            this.add_Employer.Text = "Додати роботодавця";
+            this.add_Employer.UseVisualStyleBackColor = true;
+            this.add_Employer.Click += new System.EventHandler(this.add_Employer_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel6.Controls.Add(this.remove_phone);
+            this.panel6.Controls.Add(this.comment_box);
+            this.panel6.Controls.Add(this.addphone);
+            this.panel6.Controls.Add(this.phone_list_emp);
+            this.panel6.Controls.Add(this.phone_emp_text);
+            this.panel6.Controls.Add(this.label3);
+            this.panel6.Location = new System.Drawing.Point(18, 154);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(806, 187);
+            this.panel6.TabIndex = 2;
+            // 
+            // remove_phone
+            // 
+            this.remove_phone.Location = new System.Drawing.Point(478, 119);
+            this.remove_phone.Name = "remove_phone";
+            this.remove_phone.Size = new System.Drawing.Size(42, 40);
+            this.remove_phone.TabIndex = 5;
+            this.remove_phone.Text = "-";
+            this.remove_phone.UseVisualStyleBackColor = true;
+            this.remove_phone.Click += new System.EventHandler(this.remove_phone_Click);
+            // 
+            // comment_box
+            // 
+            this.comment_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.comment_box.Location = new System.Drawing.Point(430, 22);
+            this.comment_box.Multiline = true;
+            this.comment_box.Name = "comment_box";
+            this.comment_box.Size = new System.Drawing.Size(204, 93);
+            this.comment_box.TabIndex = 4;
+            // 
+            // addphone
+            // 
+            this.addphone.Location = new System.Drawing.Point(430, 119);
+            this.addphone.Name = "addphone";
+            this.addphone.Size = new System.Drawing.Size(42, 40);
+            this.addphone.TabIndex = 3;
+            this.addphone.Text = "+";
+            this.addphone.UseVisualStyleBackColor = true;
+            this.addphone.Click += new System.EventHandler(this.addphone_Click);
+            // 
+            // phone_list_emp
+            // 
+            this.phone_list_emp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phone_list_emp.Location = new System.Drawing.Point(23, 63);
+            this.phone_list_emp.Name = "phone_list_emp";
+            this.phone_list_emp.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.phone_list_emp.Size = new System.Drawing.Size(378, 96);
+            this.phone_list_emp.TabIndex = 2;
+            this.phone_list_emp.Text = "";
+            // 
+            // phone_emp_text
+            // 
+            this.phone_emp_text.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.phone_emp_text.Location = new System.Drawing.Point(176, 24);
+            this.phone_emp_text.Name = "phone_emp_text";
+            this.phone_emp_text.Size = new System.Drawing.Size(225, 22);
+            this.phone_emp_text.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(17, 24);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(122, 16);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Номер телефону:";
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel5.Controls.Add(this.label2);
+            this.panel5.Controls.Add(this.emp_email);
+            this.panel5.Location = new System.Drawing.Point(18, 87);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(806, 64);
+            this.panel5.TabIndex = 2;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.AliceBlue;
+            this.label2.Location = new System.Drawing.Point(17, 20);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(141, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Пошта роботодавця:";
+            // 
+            // emp_email
+            // 
+            this.emp_email.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.emp_email.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.emp_email.Location = new System.Drawing.Point(176, 18);
+            this.emp_email.Name = "emp_email";
+            this.emp_email.Size = new System.Drawing.Size(197, 22);
+            this.emp_email.TabIndex = 0;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel4.Controls.Add(this.Employer_name);
+            this.panel4.Controls.Add(this.name_employer_text_box);
+            this.panel4.Location = new System.Drawing.Point(18, 17);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(806, 64);
+            this.panel4.TabIndex = 0;
+            // 
+            // Employer_name
+            // 
+            this.Employer_name.AutoSize = true;
+            this.Employer_name.BackColor = System.Drawing.Color.AliceBlue;
+            this.Employer_name.Location = new System.Drawing.Point(17, 20);
+            this.Employer_name.Name = "Employer_name";
+            this.Employer_name.Size = new System.Drawing.Size(121, 16);
+            this.Employer_name.TabIndex = 1;
+            this.Employer_name.Text = "Ім\'я роботодавця:";
+            // 
+            // name_employer_text_box
+            // 
+            this.name_employer_text_box.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.name_employer_text_box.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.name_employer_text_box.Location = new System.Drawing.Point(162, 18);
+            this.name_employer_text_box.Name = "name_employer_text_box";
+            this.name_employer_text_box.Size = new System.Drawing.Size(197, 22);
+            this.name_employer_text_box.TabIndex = 0;
+            // 
             // Add_Person
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(875, 780);
+            this.Controls.Add(this.Citizen_panel);
             this.Controls.Add(this.Employer_panel);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -531,12 +531,6 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.Employer_panel.ResumeLayout(false);
-            this.panel6.ResumeLayout(false);
-            this.panel6.PerformLayout();
-            this.panel5.ResumeLayout(false);
-            this.panel5.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.Citizen_panel.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
@@ -544,6 +538,12 @@
             this.panel7.PerformLayout();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.panel6.ResumeLayout(false);
+            this.panel6.PerformLayout();
+            this.panel5.ResumeLayout(false);
+            this.panel5.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
