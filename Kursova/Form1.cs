@@ -16,6 +16,7 @@ namespace Kursova
         public Form1()
         {
             InitializeComponent();
+
             StartPosition = FormStartPosition.CenterScreen;
             
         }
