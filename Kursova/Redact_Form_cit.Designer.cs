@@ -86,15 +86,29 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.Education = new System.Windows.Forms.TabPage();
-            this.Skills_Citizen = new System.Windows.Forms.TabPage();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.btn_delete = new System.Windows.Forms.Button();
+            this.combo_type = new System.Windows.Forms.ComboBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.btn_update = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label18 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.text_number = new System.Windows.Forms.TextBox();
+            this.text_Type = new System.Windows.Forms.TextBox();
+            this.Add_Educ = new System.Windows.Forms.Button();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
             this.Update_Education = new System.Windows.Forms.RadioButton();
             this.Add_Education = new System.Windows.Forms.RadioButton();
-            this.label15 = new System.Windows.Forms.Label();
-            this.label16 = new System.Windows.Forms.Label();
-            this.Add_Educ = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Skills_Citizen = new System.Windows.Forms.TabPage();
+            this.remove_skill_data = new System.Windows.Forms.Button();
+            this.add_skill_to_data = new System.Windows.Forms.Button();
+            this.Remove_skill = new System.Windows.Forms.Button();
+            this.button_sentSkill = new System.Windows.Forms.Button();
+            this.CItizen_skills_data = new System.Windows.Forms.DataGridView();
+            this.skill_box = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -107,7 +121,10 @@
             this.Add_panel.SuspendLayout();
             this.Education.SuspendLayout();
             this.panel6.SuspendLayout();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.Skills_Citizen.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CItizen_skills_data)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -689,18 +706,10 @@
             this.Education.Text = "Освіта";
             this.Education.UseVisualStyleBackColor = true;
             // 
-            // Skills_Citizen
-            // 
-            this.Skills_Citizen.Location = new System.Drawing.Point(4, 25);
-            this.Skills_Citizen.Name = "Skills_Citizen";
-            this.Skills_Citizen.Size = new System.Drawing.Size(576, 435);
-            this.Skills_Citizen.TabIndex = 4;
-            this.Skills_Citizen.Text = "Навички";
-            this.Skills_Citizen.UseVisualStyleBackColor = true;
-            // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
+            this.panel6.Controls.Add(this.panel8);
             this.panel6.Controls.Add(this.panel7);
             this.panel6.Controls.Add(this.Update_Education);
             this.panel6.Controls.Add(this.Add_Education);
@@ -709,49 +718,114 @@
             this.panel6.Size = new System.Drawing.Size(577, 435);
             this.panel6.TabIndex = 0;
             // 
+            // panel8
+            // 
+            this.panel8.BackColor = System.Drawing.Color.AliceBlue;
+            this.panel8.Controls.Add(this.btn_delete);
+            this.panel8.Controls.Add(this.combo_type);
+            this.panel8.Controls.Add(this.textBox1);
+            this.panel8.Controls.Add(this.btn_update);
+            this.panel8.Controls.Add(this.label17);
+            this.panel8.Controls.Add(this.label18);
+            this.panel8.Location = new System.Drawing.Point(24, 41);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(524, 364);
+            this.panel8.TabIndex = 5;
+            this.panel8.Visible = false;
+            // 
+            // btn_delete
+            // 
+            this.btn_delete.Location = new System.Drawing.Point(120, 170);
+            this.btn_delete.Name = "btn_delete";
+            this.btn_delete.Size = new System.Drawing.Size(75, 23);
+            this.btn_delete.TabIndex = 6;
+            this.btn_delete.Text = "Видалити";
+            this.btn_delete.UseVisualStyleBackColor = true;
+            this.btn_delete.Click += new System.EventHandler(this.btn_delete_Click);
+            // 
+            // combo_type
+            // 
+            this.combo_type.FormattingEnabled = true;
+            this.combo_type.Location = new System.Drawing.Point(120, 40);
+            this.combo_type.Name = "combo_type";
+            this.combo_type.Size = new System.Drawing.Size(163, 24);
+            this.combo_type.TabIndex = 5;
+            this.combo_type.SelectedIndexChanged += new System.EventHandler(this.combo_type_SelectedIndexChanged);
+            // 
+            // textBox1
+            // 
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Location = new System.Drawing.Point(120, 118);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(163, 22);
+            this.textBox1.TabIndex = 4;
+            // 
+            // btn_update
+            // 
+            this.btn_update.Location = new System.Drawing.Point(28, 171);
+            this.btn_update.Name = "btn_update";
+            this.btn_update.Size = new System.Drawing.Size(81, 23);
+            this.btn_update.TabIndex = 2;
+            this.btn_update.Text = "Оновити";
+            this.btn_update.UseVisualStyleBackColor = true;
+            this.btn_update.Click += new System.EventHandler(this.btn_update_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(25, 108);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(84, 32);
+            this.label17.TabIndex = 1;
+            this.label17.Text = "Номер \r\nдокумента: ";
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(25, 43);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(79, 16);
+            this.label18.TabIndex = 0;
+            this.label18.Text = "Тип освіти:";
+            // 
             // panel7
             // 
             this.panel7.BackColor = System.Drawing.Color.AliceBlue;
-            this.panel7.Controls.Add(this.textBox1);
+            this.panel7.Controls.Add(this.text_number);
+            this.panel7.Controls.Add(this.text_Type);
             this.panel7.Controls.Add(this.Add_Educ);
             this.panel7.Controls.Add(this.label16);
             this.panel7.Controls.Add(this.label15);
-            this.panel7.Location = new System.Drawing.Point(36, 42);
+            this.panel7.Location = new System.Drawing.Point(24, 41);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(507, 364);
+            this.panel7.Size = new System.Drawing.Size(524, 364);
             this.panel7.TabIndex = 2;
             // 
-            // Update_Education
+            // text_number
             // 
-            this.Update_Education.AutoSize = true;
-            this.Update_Education.Location = new System.Drawing.Point(134, 14);
-            this.Update_Education.Name = "Update_Education";
-            this.Update_Education.Size = new System.Drawing.Size(152, 20);
-            this.Update_Education.TabIndex = 1;
-            this.Update_Education.TabStop = true;
-            this.Update_Education.Text = "Оновити/видалити";
-            this.Update_Education.UseVisualStyleBackColor = true;
+            this.text_number.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_number.Location = new System.Drawing.Point(120, 117);
+            this.text_number.Name = "text_number";
+            this.text_number.Size = new System.Drawing.Size(163, 22);
+            this.text_number.TabIndex = 4;
             // 
-            // Add_Education
+            // text_Type
             // 
-            this.Add_Education.AutoSize = true;
-            this.Add_Education.Location = new System.Drawing.Point(36, 15);
-            this.Add_Education.Name = "Add_Education";
-            this.Add_Education.Size = new System.Drawing.Size(76, 20);
-            this.Add_Education.TabIndex = 0;
-            this.Add_Education.TabStop = true;
-            this.Add_Education.Text = "Додати";
-            this.Add_Education.UseVisualStyleBackColor = true;
-            this.Add_Education.CheckedChanged += new System.EventHandler(this.Add_Education_CheckedChanged);
+            this.text_Type.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.text_Type.Location = new System.Drawing.Point(120, 49);
+            this.text_Type.Name = "text_Type";
+            this.text_Type.Size = new System.Drawing.Size(163, 22);
+            this.text_Type.TabIndex = 3;
             // 
-            // label15
+            // Add_Educ
             // 
-            this.label15.AutoSize = true;
-            this.label15.Location = new System.Drawing.Point(25, 48);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(79, 16);
-            this.label15.TabIndex = 0;
-            this.label15.Text = "Тип освіти:";
+            this.Add_Educ.Location = new System.Drawing.Point(28, 171);
+            this.Add_Educ.Name = "Add_Educ";
+            this.Add_Educ.Size = new System.Drawing.Size(81, 23);
+            this.Add_Educ.TabIndex = 2;
+            this.Add_Educ.Text = "Додати";
+            this.Add_Educ.UseVisualStyleBackColor = true;
+            this.Add_Educ.Click += new System.EventHandler(this.Add_Educ_Click);
             // 
             // label16
             // 
@@ -762,33 +836,124 @@
             this.label16.TabIndex = 1;
             this.label16.Text = "Номер \r\nдокумента: ";
             // 
-            // Add_Educ
+            // label15
             // 
-            this.Add_Educ.Location = new System.Drawing.Point(28, 174);
-            this.Add_Educ.Name = "Add_Educ";
-            this.Add_Educ.Size = new System.Drawing.Size(81, 23);
-            this.Add_Educ.TabIndex = 2;
-            this.Add_Educ.Text = "Додати";
-            this.Add_Educ.UseVisualStyleBackColor = true;
-            this.Add_Educ.Click += new System.EventHandler(this.Add_Educ_Click);
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(25, 48);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(79, 16);
+            this.label15.TabIndex = 0;
+            this.label15.Text = "Тип освіти:";
             // 
-            // textBox1
+            // Update_Education
             // 
-            this.textBox1.Location = new System.Drawing.Point(120, 41);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 22);
-            this.textBox1.TabIndex = 3;
+            this.Update_Education.AutoSize = true;
+            this.Update_Education.Location = new System.Drawing.Point(106, 14);
+            this.Update_Education.Name = "Update_Education";
+            this.Update_Education.Size = new System.Drawing.Size(152, 20);
+            this.Update_Education.TabIndex = 1;
+            this.Update_Education.Text = "Оновити/видалити";
+            this.Update_Education.UseVisualStyleBackColor = true;
+            // 
+            // Add_Education
+            // 
+            this.Add_Education.AutoSize = true;
+            this.Add_Education.Checked = true;
+            this.Add_Education.Location = new System.Drawing.Point(24, 14);
+            this.Add_Education.Name = "Add_Education";
+            this.Add_Education.Size = new System.Drawing.Size(76, 20);
+            this.Add_Education.TabIndex = 0;
+            this.Add_Education.TabStop = true;
+            this.Add_Education.Text = "Додати";
+            this.Add_Education.UseVisualStyleBackColor = true;
+            this.Add_Education.CheckedChanged += new System.EventHandler(this.Add_Education_CheckedChanged);
+            // 
+            // Skills_Citizen
+            // 
+            this.Skills_Citizen.Controls.Add(this.remove_skill_data);
+            this.Skills_Citizen.Controls.Add(this.add_skill_to_data);
+            this.Skills_Citizen.Controls.Add(this.Remove_skill);
+            this.Skills_Citizen.Controls.Add(this.button_sentSkill);
+            this.Skills_Citizen.Controls.Add(this.CItizen_skills_data);
+            this.Skills_Citizen.Controls.Add(this.skill_box);
+            this.Skills_Citizen.Location = new System.Drawing.Point(4, 25);
+            this.Skills_Citizen.Name = "Skills_Citizen";
+            this.Skills_Citizen.Size = new System.Drawing.Size(576, 435);
+            this.Skills_Citizen.TabIndex = 4;
+            this.Skills_Citizen.Text = "Навички";
+            this.Skills_Citizen.UseVisualStyleBackColor = true;
+            // 
+            // remove_skill_data
+            // 
+            this.remove_skill_data.Location = new System.Drawing.Point(222, 45);
+            this.remove_skill_data.Name = "remove_skill_data";
+            this.remove_skill_data.Size = new System.Drawing.Size(196, 23);
+            this.remove_skill_data.TabIndex = 5;
+            this.remove_skill_data.Text = "Видалити обрану навичку";
+            this.remove_skill_data.UseVisualStyleBackColor = true;
+            this.remove_skill_data.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // add_skill_to_data
+            // 
+            this.add_skill_to_data.Location = new System.Drawing.Point(24, 45);
+            this.add_skill_to_data.Name = "add_skill_to_data";
+            this.add_skill_to_data.Size = new System.Drawing.Size(176, 23);
+            this.add_skill_to_data.TabIndex = 4;
+            this.add_skill_to_data.Text = "Додати нову навичку";
+            this.add_skill_to_data.UseVisualStyleBackColor = true;
+            this.add_skill_to_data.Click += new System.EventHandler(this.add_skill_to_data_Click);
+            // 
+            // Remove_skill
+            // 
+            this.Remove_skill.Location = new System.Drawing.Point(479, 16);
+            this.Remove_skill.Name = "Remove_skill";
+            this.Remove_skill.Size = new System.Drawing.Size(49, 23);
+            this.Remove_skill.TabIndex = 3;
+            this.Remove_skill.Text = "-";
+            this.Remove_skill.UseVisualStyleBackColor = true;
+            this.Remove_skill.Click += new System.EventHandler(this.Remove_skill_Click);
+            // 
+            // button_sentSkill
+            // 
+            this.button_sentSkill.Location = new System.Drawing.Point(425, 15);
+            this.button_sentSkill.Name = "button_sentSkill";
+            this.button_sentSkill.Size = new System.Drawing.Size(48, 23);
+            this.button_sentSkill.TabIndex = 2;
+            this.button_sentSkill.Text = "+";
+            this.button_sentSkill.UseVisualStyleBackColor = true;
+            this.button_sentSkill.Click += new System.EventHandler(this.button_sentSkill_Click);
+            // 
+            // CItizen_skills_data
+            // 
+            this.CItizen_skills_data.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.CItizen_skills_data.Location = new System.Drawing.Point(24, 87);
+            this.CItizen_skills_data.Name = "CItizen_skills_data";
+            this.CItizen_skills_data.RowHeadersWidth = 51;
+            this.CItizen_skills_data.RowTemplate.Height = 24;
+            this.CItizen_skills_data.Size = new System.Drawing.Size(529, 339);
+            this.CItizen_skills_data.TabIndex = 1;
+            this.CItizen_skills_data.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
+            // 
+            // skill_box
+            // 
+            this.skill_box.FormattingEnabled = true;
+            this.skill_box.Location = new System.Drawing.Point(24, 15);
+            this.skill_box.Name = "skill_box";
+            this.skill_box.Size = new System.Drawing.Size(394, 24);
+            this.skill_box.TabIndex = 0;
+            this.skill_box.TextChanged += new System.EventHandler(this.skill_box_TextChanged);
             // 
             // Redact_Form_cit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1211, 579);
+            this.ClientSize = new System.Drawing.Size(607, 579);
             this.Controls.Add(this.tabControl1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Redact_Form_cit";
-            this.Text = "Redact_Form_cit";
+            this.Text = "Редагування громадянина";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Redact_Form_cit_FormClosing);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -808,8 +973,12 @@
             this.Education.ResumeLayout(false);
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            this.Skills_Citizen.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.CItizen_skills_data)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -882,6 +1051,20 @@
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Button Add_Educ;
+        private System.Windows.Forms.TextBox text_Type;
+        private System.Windows.Forms.TextBox text_number;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.ComboBox combo_type;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button btn_update;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.Button btn_delete;
+        private System.Windows.Forms.ComboBox skill_box;
+        private System.Windows.Forms.Button Remove_skill;
+        private System.Windows.Forms.Button button_sentSkill;
+        private System.Windows.Forms.DataGridView CItizen_skills_data;
+        private System.Windows.Forms.Button remove_skill_data;
+        private System.Windows.Forms.Button add_skill_to_data;
     }
 }

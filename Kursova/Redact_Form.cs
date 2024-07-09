@@ -211,5 +211,23 @@ namespace Kursova
                 selectedPhone = null;
             }
         }
+
+        private void Redact_Form_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Ви впевнені, що хочете закрити вікно?", "Закриття програми", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.No)
+            {
+                e.Cancel = true; // Відміна закриття форми
+            }
+            else if (result == DialogResult.Yes)
+            {
+                Manage_Person mp = (Manage_Person)Application.OpenForms["Manage_Person"];
+                if (mp != null)
+                {
+                    mp.Enabled = true;
+                    mp.Focus(); // Фокусуємося на формі Form1
+                }
+            }
+        }
     }
 }
